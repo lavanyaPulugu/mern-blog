@@ -316,6 +316,12 @@ textarea {
 .login small a {
   color: var(--color-primary);
 }
+
+.ql-editor {
+  overflow: scroll;
+  background: var(--color-white);
+  height: 8rem;
+}
 /*----------------------authors ---------------*/
 .authors_container {
   display: grid;
@@ -400,4 +406,112 @@ textarea {
   margin-top: 3rem;
   margin-inline: auto;
   width: var(--form-width);
+}
+
+/*----------------------- dashboard -------------------*/
+.dashboard_container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.dashboard_post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  background: var(--color-white);
+  padding: 0.5rem 1.2rem;
+  border-radius: var(--radius-3);
+}
+.dashboard_post-info {
+  display: flex;
+  gap: 2rem;
+  width: 100%;
+  align-items: center;
+}
+.dashboard_post-thumbnai {
+  width: 4rem;
+  border-radius: var(--radius-1);
+  overflow: hidden;
+}
+.dashboard_post-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/*==================== media queries (small devices)===========*/
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1.4rem;
+  }
+  h3 {
+    font-size: 1.2rem;
+  }
+  .container {
+    width: var(--container-width-md);
+  }
+
+  .nav_container {
+    position: relative;
+  }
+  .nav_menu {
+    position: absolute;
+    top: 5rem;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+  }
+  .nav_menu li {
+    width: 100%;
+    box-shadow: -2rem 4rem 4rem rgba(0, 0, 0, 0.26);
+  }
+  .nav_menu li a {
+    display: block;
+    background: var(--color-white);
+    padding: 0.85rem 2.5rem;
+  }
+  .nav_toggle-btn {
+    display: inline-block;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+  }
+  .posts_container {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  .footer_categories {
+    flex-direction: column;
+  }
+  .post_details {
+    width: 100%;
+    background: transparent;
+    padding: 0;
+  }
+
+  .register,
+  .login,
+  .create-post {
+    width: 100%;
+  }
+  .form.profile_form {
+    margin-top: 2.5rem;
+    width: 100%;
+  }
+  .authors_container {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
+  .dashboard_post {
+    flex-direction: column;
+  }
+  .dashboard_post-info {
+    gap: 1.5rem;
+  }
+  .dashboard_post-thumbnai {
+    width: 5rem;
+  }
 }
